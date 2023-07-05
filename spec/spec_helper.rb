@@ -11,7 +11,7 @@ RSpec::Matchers.define :include_array do |expected|
 end
 
 def run_file(file)
-  eval(File.read(file), binding)
+  eval(File.read(file), binding, file)
 end
 
 def get_variable_from_file(file, variable)
